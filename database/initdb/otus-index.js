@@ -3,6 +3,7 @@ db = db.getSiblingDB('otus');
 db.auth ("USER", "PASS")
 
 db.getCollection("activity").createIndex({ "surveyForm.surveyTemplate.identity.acronym": 1 });
+db.getCollection("activity").createIndex({ "surveyForm.surveyTemplate": 1 });
 db.getCollection("activity").createIndex({ "participantData.recruitmentNumber": 1 });
 db.getCollection("activity").createIndex({ "participantData.fieldCenter.acronym": 1 });
 db.getCollection("activity").createIndex({ "isDiscarded": 1 });
@@ -13,12 +14,19 @@ db.getCollection("aliquot").createIndex({ "code": 1 });
 db.getCollection("aliquot").createIndex({ "transportationLotId": 1 });
 db.getCollection("aliquot").createIndex({ "examLotId": 1 });
 
+db.getCollection("eventlog").createIndex({ "creationDate": 1 });
+
 db.getCollection("exam_result").createIndex({ "recruitmentNumber": 1 });
 db.getCollection("exam_result").createIndex({ "examSendingLotId": 1 });
 db.getCollection("exam_result").createIndex({ "objectType": 1 });
 db.getCollection("exam_result").createIndex({ "examName": 1 });
 db.getCollection("exam_result").createIndex({ "recruitmentNumber": 1 });
+db.getCollection("exam_result").createIndex({ "examId": 1 });
 db.getCollection("exam_result").createIndex({ "aliquotCode": 1 });
+
+db.getCollection("filestore.chunks").createIndex({ "files_id": 1, "n": 1 });
+
+db.getCollection("filestore.files").createIndex({ "filename": 1, "uploadDate": 1 });
 
 db.getCollection("participant").createIndex({ "recruitmentNumber": 1 });
 
