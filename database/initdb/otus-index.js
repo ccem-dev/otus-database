@@ -2,6 +2,10 @@ db = db.getSiblingDB('otus');
 
 db.auth ("USER", "PASS")
 
+db.getCollection("activity_inapplicability").createIndex({ "acronym": 1 });
+db.getCollection("activity_inapplicability").createIndex({ "recruitmentNumber": 1 });
+
+
 db.getCollection("activity").createIndex({ "surveyForm.surveyTemplate.identity.acronym": 1 });
 db.getCollection("activity").createIndex({ "surveyForm.surveyTemplate": 1 });
 db.getCollection("activity").createIndex({ "participantData.recruitmentNumber": 1 });
@@ -25,13 +29,13 @@ db.getCollection("exam_result").createIndex({ "examId": 1 });
 db.getCollection("exam_result").createIndex({ "aliquotCode": 1 });
 
 db.getCollection("filestore.chunks").createIndex({ "files_id": 1, "n": 1 });
-
 db.getCollection("filestore.files").createIndex({ "filename": 1, "uploadDate": 1 });
+db.getCollection("fs.files").createIndex({ "filename": 1 });
 
 db.getCollection("participant").createIndex({ "recruitmentNumber": 1 });
 
 db.getCollection("participant_laboratory").createIndex({ "recruitmentNumber": 1 });
 
-db.getCollection("filestore.files").createIndex({ "filename": 1, "uploadDate": 1 });
 
-db.getCollection("fs.files").createIndex({ "filename": 1 });
+db.getCollection("survey").createIndex({ "isDiscarded": 1 });
+db.getCollection("survey").createIndex({ "surveyTemplate.identity.acronym": 1 });

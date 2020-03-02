@@ -1,11 +1,11 @@
-db = db.getSiblingDB('otus-domain');
+db = db.getSiblingDB('outcomes-database');
 
 db.createUser({
   user: USER,
   pwd: PASS,
   roles: [{
     role: "dbOwner",
-    db: "otus-domain"
+    db: "outcomes-database"
   }]
 });
 

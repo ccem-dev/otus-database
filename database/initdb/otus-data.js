@@ -2,6 +2,13 @@ db = db.getSiblingDB('otus');
 
 db.auth ("USER", "PASS")
 
+db.getCollection("project_configuration").insert({
+  "objectType" : "ProjectConfiguration",
+  "participantRegistration" : false,
+  "autoGenerateRecruitmentNumber" : false
+});
+
+
 db.getCollection("user_permission_profile").insert({
   "name": "DEFAULT",
   "permissions": [{
