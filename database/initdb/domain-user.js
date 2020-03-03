@@ -4,9 +4,7 @@ db.createUser({
   user: USER,
   pwd: PASS,
   roles: [{
-    role: "dbOwner",
-    db: "otus-domain"
+    role: "otus-domain",
+    db: "admin"
   }]
 });
-
-db.grantRolesToUser(USER, [ { role: "executeFunctions", db: "admin" } ]);

@@ -4,9 +4,8 @@ db.createUser({
   user: USER,
   pwd: PASS,
   roles: [{
-    role: "dbOwner",
-    db: "db-distribution"
+    role: "db-distribution",
+    db: "admin"
   }]
 });
 
-db.grantRolesToUser(USER, [ { role: "executeFunctions", db: "admin" } ]);
