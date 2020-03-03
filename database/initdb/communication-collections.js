@@ -1,4 +1,4 @@
-db = db.getSiblingDB('otus-communication.js');
+db = db.getSiblingDB('otus-communication');
 
 db.auth ("USER", "PASS")
 

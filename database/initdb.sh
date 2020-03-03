@@ -15,3 +15,6 @@ mongo --eval "var USER='$OUTCOMES_USER'; var PASS='$OUTCOMES_PASS';" outcomes-co
 
 mongo --eval "var USER='$COMMUNICATION_USER'; var PASS='$COMMUNICATION_PASS';" communication-user.js
 mongo --eval "var USER='$COMMUNICATION_USER'; var PASS='$COMMUNICATION_PASS';" communication-collections.js
+
+mongo --eval "var USER='$DISTRIBUTION_USER'; var PASS='$DISTRIBUTION_PASS';" distribution-user.js
+mongo --eval "var USER='$DISTRIBUTION_USER'; var PASS='$DISTRIBUTION_PASS';" distribution-collections.js
