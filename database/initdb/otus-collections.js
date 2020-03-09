@@ -37,3 +37,7 @@ db.createCollection("unnecessary");
 db.createCollection("user");
 db.createCollection("user_permission");
 db.createCollection("user_permission_profile");
+db.createCollection("transport_location_point");
+db.createCollection("user_location_point_correlation");
+db.createCollection("laboratory_material_tracking");
+db.createCollection("transport_material_correlation");
