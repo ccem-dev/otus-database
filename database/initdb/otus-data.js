@@ -11,13 +11,31 @@ db.getCollection("project_configuration").insert({
 
 db.getCollection("user_permission_profile").insert({
   "name": "DEFAULT",
-  "permissions": [{
+  "permissions": [
+    {
+      "objectType": "ParticipantPermission",
+      "participantListAccess": false,
+      "participantCreateAccess": false,
+      "anonymousParticipantAccess": false
+    },
+    {
+      "objectType": "MonitoringPermission",
+      "centerActivitiesAccess": false,
+      "activityFlagsAccess": false,
+      "laboratoryFlagsAccess": false,
+      "laboratoryControlAccess": false,
+      "pendencyVisualizerAccess": false
+    },
+    {
       "objectType": "SurveyGroupPermission",
       "groups": []
     },
     {
-      "access": false,
-      "objectType": "LaboratoryPermission"
+      "objectType": "LaboratoryPermission",
+      "sampleTransportationAccess": false,
+      "examLotsAccess": false,
+      "examSendingAccess": false,
+      "unattachedLaboratoriesAccess": false
     }
   ]
 });
