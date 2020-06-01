@@ -13,6 +13,10 @@ db.getCollection("user_permission_profile").insert({
   "name": "DEFAULT",
   "permissions": [
     {
+      "objectType": "activityPermission",
+      "participantActivityAccess": false
+    },
+    {
       "objectType": "ParticipantPermission",
       "participantListAccess": false,
       "participantCreateAccess": false,
