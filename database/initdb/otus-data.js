@@ -13,8 +13,9 @@ db.getCollection("user_permission_profile").insert({
   "name": "DEFAULT",
   "permissions": [
     {
-      "objectType": "activityPermission",
-      "participantActivityAccess": false
+      "objectType": "ActivityPermission",
+      "participantActivityAccess": false,
+      "offlineActivitySincAccess": false,
     },
     {
       "objectType": "ParticipantPermission",
@@ -36,6 +37,7 @@ db.getCollection("user_permission_profile").insert({
     },
     {
       "objectType": "LaboratoryPermission",
+      "participantLaboratoryAccess": false,
       "sampleTransportationAccess": false,
       "examLotsAccess": false,
       "examSendingAccess": false,
