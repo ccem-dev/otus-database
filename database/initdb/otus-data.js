@@ -41,7 +41,8 @@ db.getCollection("user_permission_profile").insert({
       "sampleTransportationAccess": false,
       "examLotsAccess": false,
       "examSendingAccess": false,
-      "unattachedLaboratoriesAccess": false
+      "unattachedLaboratoriesAccess": false,
+      "laboratoryMaterialManagerAccess": false
     }
   ]
 });
