@@ -29,4 +29,4 @@ COPY database/custom-mongo.conf /etc/custom-mongo.conf
 
 EXPOSE 27017
 
-CMD ["mongod","--auth", "-f", "/etc/custom-mongo.conf"]
+CMD ["mongod","--replSet" ,"rs0","--auth", "-f", "/etc/custom-mongo.conf"]
