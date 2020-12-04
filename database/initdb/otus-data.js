@@ -42,7 +42,8 @@ db.getCollection("user_permission_profile").insert({
       "examLotsAccess": false,
       "examSendingAccess": false,
       "unattachedLaboratoriesAccess": false,
-      "laboratoryMaterialManagerAccess": false
+      "laboratoryMaterialManagerAccess" : false,
+      "aliquotManagerAccess": false
     }
   ]
 });
