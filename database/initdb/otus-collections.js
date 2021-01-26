@@ -41,3 +41,4 @@ db.createCollection("transport_location_point");
 db.createCollection("user_location_point_correlation");
 db.createCollection("laboratory_material_tracking");
 db.createCollection("transport_material_correlation");
+db.createCollection("participant_contact_attempt_configuration");

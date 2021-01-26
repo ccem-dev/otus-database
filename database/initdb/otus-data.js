@@ -5,7 +5,8 @@ db.auth ("USER", "PASS")
 db.getCollection("project_configuration").insert({
   "objectType" : "ProjectConfiguration",
   "participantRegistration" : false,
-  "autoGenerateRecruitmentNumber" : false
+  "autoGenerateRecruitmentNumber" : false,
+  "addressCensusRequired": false
 });
 
 
@@ -44,6 +45,29 @@ db.getCollection("user_permission_profile").insert({
       "unattachedLaboratoriesAccess": false,
       "laboratoryMaterialManagerAccess" : false,
       "aliquotManagerAccess": false
+    }
+  ]
+});
+
+db.participant_contact_attempt_configuration.insert({
+  "objectType": "AddressMetadata",
+  "numberOfAttempts": 3,
+  "statusMetadata": [
+    {
+      "value": "ACEITE",
+      "statusColor": "#1CD28A"
+    },
+    {
+      "value": "AUSENTE",
+      "statusColor": "#F4CA46"
+    },
+    {
+      "value": "RECUSA",
+      "statusColor": "#FA4159"
+    },
+    {
+      "value": "VAGO",
+      "statusColor": "#CECECE"
     }
   ]
 });
